@@ -1,0 +1,204 @@
+body {
+    background: #e6f0ff;
+    font-family: 'Verdana', Arial, sans-serif;
+}
+
+p {
+    -webkit-margin-before: 0em;
+    -webkit-margin-after: 0em;
+    margin-top: 0em;
+    margin-bottom: 0em;
+}
+
+.header {
+    background: #0066ff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.header h1 {
+    color: #ffffff;
+    text-align: center;
+}
+
+.main {
+    margin-top: 100px;
+}
+
+.row {
+    margin-bottom: 10px;
+}
+
+.sector {
+    background: #ccccff;
+    margin: auto;
+    width: 1200px;
+    border: 2px solid #000099;
+    border-radius: 25px;
+    overflow: hidden;
+}
+
+.section_header {
+    background: #000099;
+    margin: 0px;
+    padding: 5px 0px 5px;
+    text-indent: 25px;
+    border-top-left-radius: 23px;
+    border-top-right-radius: 23px;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.sector form {
+    padding: 25px 25px 0px;
+}
+
+.sector form p {
+    display: inline;
+}
+
+.sector input[type="text"], .sector input[type="password"] {
+    border-radius: 10px;
+    width: 295px;
+    margin: 0px 40px 0px 10px;
+    padding-left: 5px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.sector input[name="port"] {
+    width: 65px;
+    padding-right: 5px;
+    text-align: right;
+}
+
+.sector input[type="checkbox"] {
+    width: 15px;
+    height: 15px;
+}
+
+.sector button {
+    background: #9999ff;
+    margin: 10px 25px 10px 25px;
+    width: 200px;
+    height: 40px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, 
+            sans-serif;
+    font-weight: bold;
+}
+
+.sector button:hover {
+    background: #8080ff;
+}
+
+.sector button:disabled {
+    background: #b3b3ff;
+    color: #555555;
+}
+
+.sector input[name="topic"] {
+    width: 445px;
+}
+
+.sector input[name="msg"] {
+    width: 420px;
+}
+
+#sector_subscribe {
+    visibility: hidden;
+}
+
+#topics_subsector {
+    float: right;
+    width: 600px;
+    text-align: left;
+    padding-top: 25px;
+}
+
+#topic_list {
+    background: #e6e6ff;
+    width: 550px;
+    border: 1px solid #8080ff;
+    border-radius: 10px;
+    font-family: 'Courier New', Courier, monospace;
+    padding: 10px;
+    overflow: auto;
+}
+
+#sector_msg {
+    visibility: hidden;
+}
+
+#terminal_subsector {
+    float: right;
+    width: 600px;
+    padding-top: 25px;
+}
+
+#terminal {
+    background: #e6e6ff;
+    height: 300px;
+    border: 1px solid #8080ff;
+    border-radius: 10px;
+    margin-right: 50px;
+    padding: 10px;
+    overflow: auto;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+@media only screen and (max-width: 1215px) {
+    .sector {
+        width: 900px;
+    }
+
+    .sector form p {
+        display: block;
+        margin: 5px 0px 2px 0px;
+    }
+
+    .sector input {
+        display: block;
+    }
+
+    .sector input[type="text"], .sector input[type="password"] {
+        width: 95%;
+    }
+
+    .sector input[name="port"] {
+        text-align: left;
+        padding-right: 0px;
+    }
+
+    .sector button {
+        display: block;
+        width: 90%;
+    }
+
+    #topics_subsector {
+        float: none;
+        width: 100%;
+        padding-left: 25px;
+        overflow: hidden;
+    }
+
+    #topic_list {
+        width: 90%;
+    }
+
+    #terminal_subsector {
+        float: none;
+        width: 100%;
+        padding-left: 25px;
+    }
+
+    #terminal {
+        margin-right: 75px;
+    }
+}
+
+@media only screen and (max-width: 915px) {
+    .sector {
+        width: 600px;
+    }
+}

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>MQTT Simple Client</title>
+        <link rel="stylesheet" type="text/css" href="style/style.css">
+        <script src="script/paho-mqtt.js"></script>
+        <script src="script/mqtt-simple-client.js"></script>
+    </head>
+    <body>
+        <div class="header"><h1>MQTT Simple Client</h1></div>
+        <div class="main">
+            <div class="row">
+                <div class="sector" id="sector_connect">
+                    <p class="section_header">Connect</p>
+                    <form id="connect">
+                        <div class="row">
+                            <p>Host</p><input type="text" name="host" value="example.hostname.com">
+                            <p>Port</p><input type="text" name="port" value="443">
+                            <p>Client ID</p><input type="text" name="clientId" value="web-client">
+                        </div>
+                        <div class="row">
+                            <p>Username</p><input type="text" name="clientUsername">
+                            <p>Password</p><input type="password" name="clientPassword">
+                            <p>Use SSL</p><input type="checkbox" name="useSSL" checked>
+                        </div>  
+                    </form>
+                    <div class="row">
+                        <button id="button_connect" onclick="mqttConnect()">Connect</button>
+                        <button id="button_disconnect" onclick="mqttDisconnect()" disabled>
+                            Disconnect
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="sector" id="sector_subscribe">
+                    <p class="section_header">Subscribe</p>
+                    <div class="row" id="topics_subsector">
+                        <div class="row">Subscribed topics:</div>
+                        <select id="topic_list" size="8"></select>
+                    </div>
+                    <form id="subscribe">
+                        <div class="row">
+                            <p>Topic</p><input type="text" name="topic">
+                        </div>
+                    </form>
+                    <div class="row">
+                        <button onclick="topicSubscribe()">Subscribe</button>
+                        <button onclick="topicUnsubscribe()">Unsubscribe</button>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="sector" id="sector_msg">
+                    <p class="section_header">Messages</p>
+                    <div class="row" id="terminal_subsector">
+                        <div class="row">Terminal</div>
+                        <div id="terminal"></div>
+                    </div>
+                    <form id="publish">
+                        <p>Topic</p><input type="text" name="topic">
+                        <p>Message</p><input type="text" name="msg">
+                    </form>
+                    <div class="row">
+                        <button onclick="publishMessage()">Publish</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
