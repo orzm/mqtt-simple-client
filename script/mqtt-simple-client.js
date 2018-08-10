@@ -5,6 +5,10 @@ function resetState() {
     document.getElementById("terminal").innerHTML = "";
 }
 
+function clearTerminal() {
+    document.getElementById("terminal").innerHTML = "";
+}
+
 function mqttConnect() {
     var config = {
         host: document.forms["connect"]["host"].value,
